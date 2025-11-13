@@ -2,15 +2,18 @@ using UnityEngine;
 
 public class Monito : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    private Rigidbody monitoRb;
+
+    private void Start()
     {
-        
+        monitoRb = GetComponent<Rigidbody>();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            monitoRb.AddForce(Vector3.up * 5f, ForceMode.Impulse);
+        }
     }
 }
