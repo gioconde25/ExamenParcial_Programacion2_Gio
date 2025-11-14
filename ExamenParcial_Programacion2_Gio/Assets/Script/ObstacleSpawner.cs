@@ -4,24 +4,34 @@ using UnityEngine;
 public class ObstacleSpawner : MonoBehaviour
 {
     [SerializeField]
-    private GameObject[] obstacles;
+    private GameObject obstaclePrefab;
 
-    private void Start()
+    [SerializeField]
+    private float minTime = 1f;
+
+    [SerializeField]
+    private float maxTime = 2f;
+
+    [SerializeField]
+    private float[] posY = new float[] { -2f, 0f, 2f };
+
+    private float posX = 30f;
+
+    void Start()
     {
-        StartCoroutine(SpawnObstacle());
+        StartCoroutine(SpawnObstacles());
     }
 
-    private IEnumerator SpawnObstacle()
+    System.Collections.IEnumerator SpawnObstacles()
     {
         while (true)
         {
-            int randomIndex = Random.Range(0, obstacles.Length);
-            float minTime = 0.6f;
-            float maxTime = 1.8f;
-            float randomTime = Random.Range(minTime, maxTime);
+            float t = Random.Range(minTime, maxTime);
+            yield return new WaitForSeconds(t);
 
-            Instantiate(obstacles[randomIndex], transform.position, Quaternion.identity);
-            yield return new WaitForSeconds(randomTime);
+            float y = posY[Random.Range(0, posY.Length)];
+
+            Instantiate(obstaclePrefab, new Vector3(posX, y, 0), Quaternion.identity);
         }
     }
 
