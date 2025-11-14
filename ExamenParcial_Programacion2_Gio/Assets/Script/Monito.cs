@@ -13,7 +13,7 @@ public class Monito : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            monitoRb.AddForce(Vector3.up * 5f, ForceMode.Impulse);
+            monitoRb.AddForce(Vector3.up * 10f, ForceMode.Impulse);
         }
     }
 }
