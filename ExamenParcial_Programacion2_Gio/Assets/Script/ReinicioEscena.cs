@@ -9,6 +9,7 @@ public class ReinicioEscena : MonoBehaviour
     {
         if (collision.gameObject.CompareTag(obstacleTag))
         {
+            AudioManager.Instance.PlaySFX("Death");
             Scene currentScene = SceneManager.GetActiveScene();
             SceneManager.LoadScene(currentScene.name);
         }

@@ -37,6 +37,7 @@ public class Monito : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
+            AudioManager.Instance.PlaySFX("Lesss Go");
             rb.linearVelocity = new Vector3(rb.linearVelocity.x, 0, rb.linearVelocity.z);
             rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
             isGrounded = false;
@@ -44,6 +45,7 @@ public class Monito : MonoBehaviour
 
         if (Input.GetKey(KeyCode.LeftControl))
         {
+            AudioManager.Instance.PlaySFX("Lesss Go");
             targetHeight = crouchHeight;
         }
         else

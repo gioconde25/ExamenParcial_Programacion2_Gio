@@ -12,11 +12,13 @@ GameObject:
   - component: {fileID: 1103874024697133481}
   - component: {fileID: 2080555137706325367}
   - component: {fileID: 6680777855189436702}
-  - component: {fileID: -6802443485810234132}
+  - component: {fileID: 4455361012537992660}
   - component: {fileID: 382488760869441202}
+  - component: {fileID: -6802443485810234132}
+  - component: {fileID: 3298447257601085064}
   m_Layer: 7
   m_Name: Obstaculo
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -113,18 +115,27 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &-6802443485810234132
-MonoBehaviour:
+--- !u!65 &4455361012537992660
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2347255774180476221}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c6f8b36835c5c1644acb799db295e3a3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Scroll
+  serializedVersion: 3
+  m_Size: {x: 1, y: 10, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &382488760869441202
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -152,3 +163,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &-6802443485810234132
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2347255774180476221}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6f8b36835c5c1644acb799db295e3a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Scroll
+--- !u!114 &3298447257601085064
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2347255774180476221}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c80e2eae004aefc448769bf46967b960, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
